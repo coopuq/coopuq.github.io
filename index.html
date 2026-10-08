@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="static/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+  <title>CoopUQ · Cooperative Forecasting for Multi-Robot Social Navigation</title>
+  <meta name="description" content="CoopUQ helps robots anticipate motion beyond their own view and use forecast uncertainty to guide navigation among people. CoRL 2026.">
+  <meta property="og:title" content="CoopUQ: Robust Multi-Robot Social Navigation">
+  <meta property="og:description" content="CoopUQ combines cooperative occupancy forecasting with uncertainty-aware navigation among people.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/supplementary-poster.webp">
+  <meta name="citation_title" content="CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting">
+  <meta name="citation_author" content="Zehao Wang">
+  <meta name="citation_author" content="Jianpeng Yao">
+  <meta name="citation_author" content="Yuping Wang">
+  <meta name="citation_author" content="Yiping Li">
+  <meta name="citation_author" content="Jiaqi Li">
+  <meta name="citation_author" content="Zhixu Li">
+  <meta name="citation_author" content="Kanghoon Lee">
+  <meta name="citation_author" content="Jinfeng Wang">
+  <meta name="citation_author" content="Cong Liu">
+  <meta name="citation_author" content="Zhaowei Tan">
+  <meta name="citation_author" content="Jinkyoo Park">
+  <meta name="citation_author" content="Jiachen Li">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="Conference on Robot Learning">
+  <link rel="stylesheet" href="static/css/fonts.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="static/js/fontawesome.all.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <button class="scroll-to-top" id="scroll-to-top" type="button" title="Scroll to top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 15 7-7 7 7"/></svg></button>
+  <nav class="coopuq-moreworks" aria-label="Laboratory">
+    <a class="external-link button is-normal is-rounded is-primary" href="https://tasl-lab.github.io/"><span class="icon"><i class="fas fa-flask" aria-hidden="true"></i></span><span>More Works</span></a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-12 has-text-centered">
+            <h1 class="title is-3 publication-title"><span style="font-weight: 800;"><span style="color:#2563eb;">CoopUQ</span></span>: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting</h1>
+            <div class="is-size-5" style="margin-top: 15px; margin-bottom: 20px;"><span style="font-weight: 600;">CoRL 2026, Austin</span></div>
+            <div class="is-size-5 publication-authors" aria-label="Authors, in publication order">
+              <span class="author-block"><a href="https://zehaowang983.github.io/">Zehao Wang</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://jianpengyao.github.io/">Jianpeng Yao</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://www.linkedin.com/in/yuping-wang-5a7178185/">Yuping Wang</a><sup>3</sup>,</span>
+              <span class="author-block">Yiping Li<sup>4</sup>,</span>
+              <span class="author-block"><a href="https://songard.github.io/">Jiaqi Li</a><sup>5</sup>,</span>
+              <span class="author-block"><a href="https://www.cs.ucr.edu/~zli538/">Zhixu Li</a><sup>2</sup>,</span>
+              <span class="author-block">Kanghoon Lee<sup>6</sup>,</span>
+              <span class="author-block">Jinfeng Wang<sup>2</sup>,</span>
+              <span class="author-block"><a href="https://intra.ece.ucr.edu/~cong/">Cong Liu</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://cs.ucr.edu/~ztan/index.html">Zhaowei Tan</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://silab.kaist.ac.kr/">Jinkyoo Park</a><sup>6</sup>,</span>
+              <span class="author-block"><a href="https://jiachenli94.github.io/">Jiachen Li</a><sup>1*</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <!-- Affiliations incorporate user corrections; see project metadata for provenance. -->
+              <span class="author-block"><sup>1</sup>Georgia Institute of Technology &nbsp;&nbsp;</span>
+              <span class="author-block"><sup>2</sup>University of California, Riverside</span><br>
+              <span class="author-block"><sup>3</sup>University of Michigan &nbsp;&nbsp;</span>
+              <span class="author-block"><sup>4</sup>University of Georgia</span><br>
+              <span class="author-block"><sup>5</sup>New York University &nbsp;&nbsp;</span>
+              <span class="author-block"><sup>6</sup>KAIST</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding author</small></span>
+              <div class="institution-logos" aria-label="Author institutions">
+                <a class="institution-logo institution-logo--georgia-tech" href="https://www.gatech.edu/" aria-label="Georgia Institute of Technology"><img src="assets/images/institutions/georgia-tech.png" width="348" height="60" alt="Georgia Institute of Technology logo" decoding="async"></a>
+                <a class="institution-logo institution-logo--ucr" href="https://www.ucr.edu/" aria-label="University of California, Riverside"><img src="assets/images/institutions/ucr.svg" width="471" height="155" alt="University of California, Riverside logo" decoding="async"></a>
+                <a class="institution-logo institution-logo--michigan" href="https://umich.edu/" aria-label="University of Michigan"><img src="assets/images/institutions/michigan.png" width="290" height="220" alt="University of Michigan logo" decoding="async"></a>
+                <a class="institution-logo institution-logo--georgia" href="https://www.uga.edu/" aria-label="University of Georgia"><img src="assets/images/institutions/georgia.png" width="3320" height="1086" alt="University of Georgia logo" decoding="async"></a>
+                <a class="institution-logo institution-logo--nyu" href="https://www.nyu.edu/" aria-label="New York University"><img src="assets/images/institutions/nyu.svg" width="92" height="96" alt="New York University logo" decoding="async"></a>
+                <a class="institution-logo institution-logo--kaist" href="https://www.kaist.ac.kr/en/" aria-label="KAIST"><img src="assets/images/institutions/kaist.svg" width="150" height="43" alt="KAIST logo" decoding="async"></a>
+              </div>
+              <span class="author-block" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <img src="static/images/tasl.svg" alt="TASL Lab Logo" style="height: 20px; width: auto;">
+                <a href="https://tasl-lab.github.io/" style="font-weight: 500; color: #2563eb; text-decoration: underline;">Trustworthy Autonomous Systems Laboratory (TASL)</a>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links" aria-label="Paper resources">
+                <span class="link-block"><button class="external-link button is-normal is-rounded is-dark" type="button" disabled title="Link pending" aria-label="ArXiv link pending"><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>ArXiv</span></button></span>
+                <span class="link-block"><button class="external-link button is-normal is-rounded is-dark" type="button" disabled title="Link pending" aria-label="Code link pending"><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></button></span>
+                <span class="link-block"><a class="external-link button is-normal is-rounded is-dark" href="#citation"><span class="icon"><i class="fas fa-quote-right" aria-hidden="true"></i></span><span>BibTeX</span></a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. Motivation: DMW teaser/overview structure with the original paper figure. -->
+    <section class="hero teaser" id="motivation" aria-labelledby="motivation-title">
+      <div class="container is-max-widescreen">
+        <div class="hero-body">
+          <h2 class="title is-3 has-text-centered" id="motivation-title">Motivation</h2>
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+              <figure class="coopuq-figure">
+                <a href="assets/images/motivation.webp" target="_blank" rel="noopener" aria-label="Open Figure 1 at full size"><img src="assets/images/motivation.webp" alt="Figure 1: a robot's view of an approaching pedestrian is blocked by an obstacle; another robot shares complementary observations for cooperative forecasting and navigation. The bottom row shows four real-world evaluation environments." width="1800" height="854"></a>
+              </figure>
+              <div class="content has-text-justified">
+              <p>In human-shared spaces, walls and furniture constrain both what a robot can see and where it can maneuver. A pedestrian hidden around a corner may become visible only when little room remains to react. Another robot may already see that pedestrian, making complementary viewpoints valuable for anticipating encounters. Cooperative occupancy forecasting combines these observations into a more complete representation of static geometry, free space, and future human motion.</p>
+              <p>More complete observations still leave uncertainty about what happens next. Pedestrians can change direction or speed, while unfamiliar layouts and denser crowds can make forecasts less reliable. Navigation must account for this uncertainty when balancing progress toward the goal with caution around potential hazards. CoopUQ connects these needs by fusing cross-robot spatiotemporal features and incorporating predicted occupancy and uncertainty into both the policy input and its training cost. This encourages caution where future occupancy is ambiguous while maintaining efficient progress through well-observed space.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Complete, unmodified supplementary video. -->
+    <section class="section" id="video" aria-label="Supplementary demonstration">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <figure>
+              <video class="coopuq-video coopuq-supplementary" controls playsinline preload="metadata" poster="assets/images/supplementary-poster.webp" width="1664" height="1010" aria-label="Supplementary demonstration video"><source src="assets/videos/CoopUQ_sup.mp4" type="video/mp4"><a href="assets/videos/CoopUQ_sup.mp4">Download the supplementary video.</a></video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Original manuscript abstract. -->
+    <section class="section hero is-light" id="abstract" aria-labelledby="abstract-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="abstract-title">Abstract</h2>
+            <div class="content has-text-justified"><p id="paper-abstract">Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-centered" id="method-title">Method</h2>
+            <figure class="method-figure">
+              <a href="assets/images/method-overview.png" target="_blank" rel="noopener" aria-label="Open the CoopUQ architecture at full size"><img src="assets/images/method-overview.png" width="3393" height="1299" loading="lazy" alt="CoopUQ architecture. Robots encode LiDAR-derived occupancy histories and fuse aligned features across robots. Stochastic forecasting produces occupancy and uncertainty maps. A constrained multi-agent policy combines these maps with ego and neighboring robot states, using separate reward and cost critics during training."></a>
+            </figure>
+            <div class="content has-text-justified">
+              <p>CoopUQ links where robots need information to where they should exercise caution. Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence. A variational autoencoder samples possible future occupancy maps; their mean gives the forecast, and normalized pixel-wise entropy estimates its uncertainty. Both maps enter the navigation policy. Crucially, predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, giving the policy a direct incentive to balance progress toward the goal with caution around uncertain future occupancy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section result-section" id="forecast-results" aria-labelledby="forecast-results-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="forecast-results-title">Can cooperation improve forecasts despite delays and noisy poses?</h2>
+        <figure class="paper-table-figure">
+          <a href="assets/images/forecasting-table.svg" target="_blank" rel="noopener" aria-label="Open occupancy forecasting results at full size"><img src="assets/images/forecasting-table.svg" width="3888" height="806" loading="lazy" alt="Table 1: occupancy forecasting at one- and five-step horizons, comparing no cooperation with early, late, and middle fusion under clean communication, a 200 ms delay, and localization noise."></a>
+        </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section result-section" id="navigation-results" aria-labelledby="navigation-results-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="navigation-results-title">Do better forecasts translate into safer navigation?</h2>
+        <figure class="paper-table-figure">
+          <a href="assets/images/navigation-table.svg" target="_blank" rel="noopener" aria-label="Open in-distribution navigation results at full size"><img src="assets/images/navigation-table.svg" width="3967" height="1114" loading="lazy" alt="Table 2: in-distribution navigation, comparing prediction-only policies and uncertainty-aware constrained policies across cooperation settings, alongside NavMesh and SCOPE."></a>
+        </figure>
+        <div class="sr-only">
+          <table class="paper-results" aria-labelledby="navigation-results-title">
+            <thead><tr><th rowspan="2" scope="col">Method</th><th rowspan="2" scope="col">Fusion</th><th rowspan="2" scope="col">SR ↑</th><th colspan="3" scope="colgroup">CR ↓</th><th rowspan="2" scope="col">TR ↓</th><th rowspan="2" scope="col">NT ↓</th><th rowspan="2" scope="col">PL ↓</th><th rowspan="2" scope="col">AA ↓</th><th rowspan="2" scope="col">ITR ↓</th><th rowspan="2" scope="col">SD ↑</th></tr><tr><th scope="col">Obstacle</th><th scope="col">Human</th><th scope="col">Robot</th></tr></thead>
+            <tbody><tr><th scope="row">NavMesh</th><td>None</td><td>0.39<span class="result-std"> ± 0.05</span></td><td><strong>0.00<span class="result-std"> ± 0.00</span></strong></td><td>0.41<span class="result-std"> ± 0.06</span></td><td>0.19<span class="result-std"> ± 0.04</span></td><td><strong>0.00<span class="result-std"> ± 0.00</span></strong></td><td>12.20<span class="result-std"> ± 0.53</span></td><td>13.89<span class="result-std"> ± 0.62</span></td><td>0.10<span class="result-std"> ± 0.05</span></td><td>12.93<span class="result-std"> ± 1.79</span></td><td>0.29<span class="result-std"> ± 0.03</span></td></tr>
+<tr><th scope="row">SCOPE</th><td>None</td><td>0.67<span class="result-std"> ± 0.03</span></td><td>0.10<span class="result-std"> ± 0.02</span></td><td>0.11<span class="result-std"> ± 0.01</span></td><td>0.03<span class="result-std"> ± 0.01</span></td><td>0.09<span class="result-std"> ± 0.02</span></td><td>13.39<span class="result-std"> ± 0.65</span></td><td>15.67<span class="result-std"> ± 0.20</span></td><td>0.18<span class="result-std"> ± 0.02</span></td><td>5.56<span class="result-std"> ± 0.39</span></td><td>0.36<span class="result-std"> ± 0.04</span></td></tr>
+<tr><th scope="row">Prediction</th><td>None</td><td>0.71<span class="result-std"> ± 0.01</span></td><td>0.12<span class="result-std"> ± 0.02</span></td><td>0.13<span class="result-std"> ± 0.01</span></td><td>0.02<span class="result-std"> ± 0.00</span></td><td>0.01<span class="result-std"> ± 0.00</span></td><td>14.36<span class="result-std"> ± 0.38</span></td><td>16.94<span class="result-std"> ± 0.26</span></td><td>0.14<span class="result-std"> ± 0.02</span></td><td>5.78<span class="result-std"> ± 0.27</span></td><td>0.34<span class="result-std"> ± 0.03</span></td></tr>
+<tr><th scope="row">CMARL</th><td>None</td><td>0.75<span class="result-std"> ± 0.02</span></td><td>0.10<span class="result-std"> ± 0.02</span></td><td>0.10<span class="result-std"> ± 0.03</span></td><td>0.01<span class="result-std"> ± 0.00</span></td><td>0.04<span class="result-std"> ± 0.02</span></td><td>10.82<span class="result-std"> ± 0.18</span></td><td>13.74<span class="result-std"> ± 0.16</span></td><td>0.10<span class="result-std"> ± 0.00</span></td><td>4.17<span class="result-std"> ± 0.26</span></td><td>0.39<span class="result-std"> ± 0.02</span></td></tr>
+<tr><th scope="row">Prediction</th><td>Late</td><td>0.78<span class="result-std"> ± 0.03</span></td><td>0.08<span class="result-std"> ± 0.02</span></td><td>0.10<span class="result-std"> ± 0.02</span></td><td>0.01<span class="result-std"> ± 0.01</span></td><td>0.02<span class="result-std"> ± 0.02</span></td><td>9.89<span class="result-std"> ± 0.18</span></td><td>12.23<span class="result-std"> ± 0.33</span></td><td>0.13<span class="result-std"> ± 0.07</span></td><td>3.96<span class="result-std"> ± 0.19</span></td><td>0.40<span class="result-std"> ± 0.01</span></td></tr>
+<tr><th scope="row">CMARL</th><td>Late</td><td>0.81<span class="result-std"> ± 0.03</span></td><td>0.07<span class="result-std"> ± 0.02</span></td><td>0.09<span class="result-std"> ± 0.02</span></td><td>0.01<span class="result-std"> ± 0.01</span></td><td>0.01<span class="result-std"> ± 0.02</span></td><td>10.93<span class="result-std"> ± 0.16</span></td><td>13.27<span class="result-std"> ± 0.36</span></td><td>0.11<span class="result-std"> ± 0.05</span></td><td>3.37<span class="result-std"> ± 0.16</span></td><td>0.42<span class="result-std"> ± 0.02</span></td></tr>
+<tr><th scope="row">Prediction</th><td>Early</td><td>0.77<span class="result-std"> ± 0.02</span></td><td>0.11<span class="result-std"> ± 0.01</span></td><td>0.06<span class="result-std"> ± 0.02</span></td><td>0.01<span class="result-std"> ± 0.01</span></td><td>0.05<span class="result-std"> ± 0.02</span></td><td>9.94<span class="result-std"> ± 0.19</span></td><td>12.55<span class="result-std"> ± 0.33</span></td><td>0.14<span class="result-std"> ± 0.06</span></td><td>2.68<span class="result-std"> ± 0.36</span></td><td>0.43<span class="result-std"> ± 0.01</span></td></tr>
+<tr><th scope="row">CMARL</th><td>Early</td><td>0.82<span class="result-std"> ± 0.02</span></td><td>0.07<span class="result-std"> ± 0.01</span></td><td>0.05<span class="result-std"> ± 0.01</span></td><td>0.00<span class="result-std"> ± 0.01</span></td><td>0.06<span class="result-std"> ± 0.02</span></td><td>11.55<span class="result-std"> ± 0.36</span></td><td>14.30<span class="result-std"> ± 0.47</span></td><td>0.10<span class="result-std"> ± 0.05</span></td><td>2.37<span class="result-std"> ± 0.19</span></td><td>0.43<span class="result-std"> ± 0.01</span></td></tr>
+<tr><th scope="row">Prediction</th><td>Middle</td><td>0.84<span class="result-std"> ± 0.02</span></td><td>0.06<span class="result-std"> ± 0.01</span></td><td>0.05<span class="result-std"> ± 0.01</span></td><td>0.01<span class="result-std"> ± 0.01</span></td><td>0.04<span class="result-std"> ± 0.02</span></td><td>10.46<span class="result-std"> ± 0.09</span></td><td>12.08<span class="result-std"> ± 0.29</span></td><td>0.11<span class="result-std"> ± 0.03</span></td><td>2.17<span class="result-std"> ± 0.26</span></td><td>0.42<span class="result-std"> ± 0.01</span></td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ (CMARL)</th><td>Middle</td><td><strong>0.90<span class="result-std"> ± 0.03</span></strong></td><td>0.04<span class="result-std"> ± 0.01</span></td><td><strong>0.02<span class="result-std"> ± 0.01</span></strong></td><td><strong>0.00<span class="result-std"> ± 0.00</span></strong></td><td>0.03<span class="result-std"> ± 0.01</span></td><td><strong>9.76<span class="result-std"> ± 0.15</span></strong></td><td><strong>11.72<span class="result-std"> ± 0.29</span></strong></td><td>0.11<span class="result-std"> ± 0.05</span></td><td><strong>2.03<span class="result-std"> ± 0.19</span></strong></td><td><strong>0.45<span class="result-std"> ± 0.03</span></strong></td></tr></tbody>
+          </table>
+        </div>
+        <p class="result-note">SR: success rate; CR: collision rate; TR: timeout rate; NT: navigation time; PL: path length; AA: average acceleration; ITR: intrusion time ratio; SD: social distance during intrusions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section result-section" id="ood-results" aria-labelledby="ood-results-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="ood-results-title">What happens when layouts and pedestrian behavior change?</h2>
+        <figure class="paper-table-figure">
+          <a href="assets/images/ood-navigation.svg" target="_blank" rel="noopener" aria-label="Open OOD navigation results at full size"><img src="assets/images/ood-navigation.svg" width="14437" height="3130" loading="lazy" alt="OOD navigation results comparing NavMesh, SCOPE, Prediction and CMARL across cooperation settings. Panels show unseen layouts, denser crowds and rushing pedestrians, with success, collision and timeout rates."></a>
+          <figcaption class="ood-panel-labels">
+            <span>(a) Unseen layouts</span>
+            <span>(b) Denser crowds</span>
+            <span>(c) Rushing pedestrians</span>
+          </figcaption>
+        </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section result-section" id="real-results" aria-labelledby="real-results-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="real-results-title">Does the learned policy transfer to real robots?</h2>
+        <figure class="paper-table-figure">
+          <a href="assets/images/real-world-table.svg" target="_blank" rel="noopener" aria-label="Open real-robot navigation results at full size"><img src="assets/images/real-world-table.svg" width="3892" height="1558" loading="lazy" alt="Table 3: real-robot success, collision, and timeout rates for CoopUQ and SCOPE in four lobby and corridor environments with one, two, and three pedestrians."></a>
+        </figure>
+        <div class="sr-only">
+          <table class="paper-results" aria-labelledby="real-results-title">
+            <thead><tr><th rowspan="2" scope="col">Method</th><th rowspan="2" scope="col">Environment</th><th colspan="3" scope="colgroup">1 pedestrian</th><th colspan="3" scope="colgroup">2 pedestrians</th><th colspan="3" scope="colgroup">3 pedestrians</th></tr><tr><th scope="col">Success ↑</th><th scope="col">Collision ↓</th><th scope="col">Timeout ↓</th><th scope="col">Success ↑</th><th scope="col">Collision ↓</th><th scope="col">Timeout ↓</th><th scope="col">Success ↑</th><th scope="col">Collision ↓</th><th scope="col">Timeout ↓</th></tr></thead>
+            <tbody><tr><th scope="row">SCOPE</th><td>Lobby-A</td><td>1.00</td><td>0.00</td><td>0.00</td><td>0.75</td><td>0.25</td><td>0.00</td><td>0.50</td><td>0.25</td><td>0.25</td></tr>
+<tr><th scope="row">SCOPE</th><td>Lobby-B</td><td>0.75</td><td>0.00</td><td>0.25</td><td>0.50</td><td>0.25</td><td>0.25</td><td>0.25</td><td>0.50</td><td>0.25</td></tr>
+<tr><th scope="row">SCOPE</th><td>Corridor-A</td><td>0.75</td><td>0.25</td><td>0.00</td><td>0.50</td><td>0.50</td><td>0.00</td><td>0.25</td><td>0.50</td><td>0.25</td></tr>
+<tr><th scope="row">SCOPE</th><td>Corridor-B</td><td>0.75</td><td>0.25</td><td>0.00</td><td>0.50</td><td>0.50</td><td>0.00</td><td>0.50</td><td>0.50</td><td>0.00</td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ</th><td>Lobby-A</td><td>1.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ</th><td>Lobby-B</td><td>1.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td><td>0.75</td><td>0.00</td><td>0.25</td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ</th><td>Corridor-A</td><td>1.00</td><td>0.00</td><td>0.00</td><td>0.75</td><td>0.00</td><td>0.25</td><td>0.75</td><td>0.25</td><td>0.00</td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ</th><td>Corridor-B</td><td>1.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td><td>1.00</td><td>0.00</td><td>0.00</td></tr>
+<tr><th scope="row">SCOPE</th><td>Average</td><td>0.81</td><td>0.13</td><td>0.06</td><td>0.56</td><td>0.38</td><td><strong>0.06</strong></td><td>0.38</td><td>0.44</td><td>0.19</td></tr>
+<tr class="result-ours"><th scope="row">CoopUQ</th><td>Average</td><td><strong>1.00</strong></td><td><strong>0.00</strong></td><td><strong>0.00</strong></td><td><strong>0.94</strong></td><td><strong>0.00</strong></td><td><strong>0.06</strong></td><td><strong>0.88</strong></td><td><strong>0.06</strong></td><td><strong>0.06</strong></td></tr></tbody>
+          </table>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-world demonstrations grouped as in the presentation. -->
+    <section class="section demo-section" id="detour" aria-labelledby="detour-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="detour-title">Anticipating a pedestrian emerging from occlusion</h2>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-1.webp" width="1280" height="720" aria-label="Early detour — trial 1"><source src="assets/videos/detour-1.mp4" type="video/mp4"><a href="assets/videos/detour-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-2.webp" width="1280" height="720" aria-label="Early detour — trial 2"><source src="assets/videos/detour-2.mp4" type="video/mp4"><a href="assets/videos/detour-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="avoidance" aria-labelledby="avoidance-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="avoidance-title">Navigating around obstacles and moving pedestrians</h2>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-1.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 1"><source src="assets/videos/avoidance-1.mp4" type="video/mp4"><a href="assets/videos/avoidance-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-2.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 2"><source src="assets/videos/avoidance-2.mp4" type="video/mp4"><a href="assets/videos/avoidance-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="occlusion" aria-labelledby="occlusion-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="occlusion-title">How cooperation changes the response to occlusion</h2>
+          <h3 class="title is-5 has-text-centered comparison-label">Without Cooperation</h3>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-1.webp" width="1280" height="720" aria-label="Baseline — trial 1"><source src="assets/videos/baseline-1.mp4" type="video/mp4"><a href="assets/videos/baseline-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-2.webp" width="1280" height="720" aria-label="Baseline — trial 2"><source src="assets/videos/baseline-2.mp4" type="video/mp4"><a href="assets/videos/baseline-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          <h3 class="title is-5 has-text-centered comparison-label">With Cooperation</h3>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-1.webp" width="1280" height="720" aria-label="CoopUQ — trial 1"><source src="assets/videos/cooperative-1.mp4" type="video/mp4"><a href="assets/videos/cooperative-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-2.webp" width="1280" height="720" aria-label="CoopUQ — trial 2"><source src="assets/videos/cooperative-2.mp4" type="video/mp4"><a href="assets/videos/cooperative-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="layouts" aria-labelledby="layouts-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="layouts-title">Adapting to different layouts and pedestrian interactions</h2>
+          <div class="columns is-variable is-6"><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-1.webp" width="1280" height="720" aria-label="Pedestrians around a seating area"><source src="assets/videos/crowds-1.mp4" type="video/mp4"><a href="assets/videos/crowds-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-2.webp" width="1280" height="720" aria-label="Pedestrians in a furnished lobby"><source src="assets/videos/crowds-2.mp4" type="video/mp4"><a href="assets/videos/crowds-2.mp4">Download video.</a></video>
+ </figure></div><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/clutter-1.webp" width="1280" height="720" aria-label="Navigation through cluttered indoor space"><source src="assets/videos/clutter-1.mp4" type="video/mp4"><a href="assets/videos/clutter-1.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="citation" aria-labelledby="citation-title">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title" id="citation-title">BibTeX</h2>
+          <div class="coopuq-citation-actions"><a href="citation.bib" download>Download .bib</a><button class="copy-bibtex-btn" id="copy-citation" type="button"><span>Copy citation</span></button></div>
+        </div>
+        <pre id="bibtex-code"><code id="bibtex">@inproceedings{wang2026coopuq,
+  title     = {CoopUQ: Robust Multi-Robot Social Navigation via
+               Uncertainty-Aware Cooperative Forecasting},
+  author    = {Wang, Zehao and Yao, Jianpeng and Wang, Yuping and
+               Li, Yiping and Li, Jiaqi and Li, Zhixu and Lee, Kanghoon and
+               Wang, Jinfeng and Liu, Cong and Tan, Zhaowei and
+               Park, Jinkyoo and Li, Jiachen},
+  booktitle = {Conference on Robot Learning},
+  year      = {2026}
+}</code></pre>
+        <p class="coopuq-copy-status" id="copy-status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><div class="columns is-centered"><div class="column is-8"><div class="content">
+      <p>This website is adapted from <a href="https://dmw-cvpr.github.io/">Drive My Way</a> and the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, originally based on <a href="https://nerfies.github.io/">Nerfies</a>.<br>The website template and its adaptations are licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+    </div></div></div></div>
+  </footer>
+</body>
+</html>
