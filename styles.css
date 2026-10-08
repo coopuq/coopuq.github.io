@@ -27,9 +27,9 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 /* Balance the visible area of wide wordmarks and compact symbols. */
 .institution-logo--georgia-tech { --logo-width: 128px; }
 .institution-logo--ucr { --logo-width: 92px; }
-.institution-logo--michigan { --logo-width: 58px; }
+.institution-logo--michigan { --logo-width: 184px; }
 .institution-logo--georgia { --logo-width: 92px; }
-.institution-logo--nyu { --logo-width: 48px; }
+.institution-logo--nyu { --logo-width: 140px; }
 .institution-logo--kaist { --logo-width: 96px; }
 .publication-authors .institution-logo::after { display: none; }
 .institution-logo:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 6px; }
