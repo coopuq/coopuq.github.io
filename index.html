@@ -109,7 +109,7 @@
               <figure class="coopuq-figure">
                 <a href="assets/images/motivation.webp" target="_blank" rel="noopener" aria-label="Open Figure 1 at full size"><img src="assets/images/motivation.webp" alt="Figure 1: a robot's view of an approaching pedestrian is blocked by an obstacle; another robot shares complementary observations for cooperative forecasting and navigation. The bottom row shows four real-world evaluation environments." width="1800" height="854"></a>
               </figure>
-              <div class="content has-text-justified">
+              <div class="content has-text-justified motivation-prose">
               <p>In human-shared spaces, walls and furniture constrain both what a robot can see and where it can maneuver. A pedestrian hidden around a corner may become visible only when little room remains to react. Another robot may already see that pedestrian. Shared observations can help the ego robot anticipate where the pedestrian may cross its path and begin slowing down or changing course before the pedestrian enters its own field of view.</p>
               <p>Even with shared observations, future pedestrian motion remains uncertain. Pedestrians can change direction or speed, while unfamiliar layouts and denser crowds can make forecasts less reliable. Navigation must account for this uncertainty when balancing progress toward the goal with caution around potential hazards. CoopUQ connects these needs by fusing cross-robot spatiotemporal features and incorporating predicted occupancy and uncertainty into both the policy input and its training cost. This encourages caution where future occupancy is ambiguous while maintaining efficient progress through well-observed space.</p>
               </div>
@@ -231,8 +231,19 @@
             <figure class="method-figure">
               <a href="assets/images/method-overview.png" target="_blank" rel="noopener" aria-label="Open the CoopUQ architecture at full size"><img src="assets/images/method-overview.png" width="3393" height="1299" loading="lazy" alt="CoopUQ architecture. Robots encode LiDAR-derived occupancy histories and fuse aligned features across robots. Stochastic forecasting produces occupancy and uncertainty maps. A constrained multi-agent policy combines these maps with ego and neighboring robot states, using separate reward and cost critics during training."></a>
             </figure>
-            <div class="content has-text-justified">
-              <p>CoopUQ links where robots need information to where they should exercise caution. Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence. A variational autoencoder samples possible future occupancy maps, with pixel-wise entropy used to construct uncertainty maps. Crucially, predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, allowing the policy to adapt its risk sensitivity under occlusions and distribution shifts while avoiding unnecessary conservatism in well-observed regions.</p>
+            <div class="content has-text-justified method-prose">
+              <div class="method-step">
+                <h3>Cooperative fusion</h3>
+                <p>Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence.</p>
+              </div>
+              <div class="method-step">
+                <h3>Forecast uncertainty</h3>
+                <p>A variational autoencoder samples possible future occupancy maps, with pixel-wise entropy used to construct uncertainty maps.</p>
+              </div>
+              <div class="method-step">
+                <h3>Risk-sensitive navigation</h3>
+                <p>Predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, allowing the policy to adapt its risk sensitivity under occlusions and distribution shifts while avoiding unnecessary conservatism in well-observed regions.</p>
+              </div>
             </div>
           </div>
         </div>
