@@ -9,7 +9,7 @@ html { scroll-padding-top: 24px; }
 .coopuq-figure img { display: block; width: 100%; height: auto; margin: 0 auto 14px; }
 .coopuq-figure figcaption, .coopuq-video-caption { font-size: .95rem; line-height: 1.65; color: var(--text-secondary); text-align: center; margin-top: 12px; }
 .coopuq-video { width: 100%; height: auto; display: block; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,.1); background: #000; }
-.coopuq-supplementary { aspect-ratio: 1664 / 1010; }
+.coopuq-supplementary { aspect-ratio: 1664 / 934; }
 #motivation .hero-body { padding-bottom: 1rem; }
 #motivation .content p:last-child { margin-bottom: 0; }
 #video { padding-top: 1rem; }

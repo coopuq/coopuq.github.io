@@ -119,13 +119,13 @@
       </div>
     </section>
 
-    <!-- 2. Complete, unmodified supplementary video. -->
+    <!-- 2. Full supplementary video with the encoded top border removed. -->
     <section class="section" id="video" aria-label="Supplementary demonstration">
       <div class="container is-max-widescreen">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <figure>
-              <video class="coopuq-video coopuq-supplementary" controls playsinline preload="metadata" poster="assets/images/supplementary-poster.webp" width="1664" height="1010" aria-label="Supplementary demonstration video"><source src="assets/videos/CoopUQ_sup.mp4" type="video/mp4"><a href="assets/videos/CoopUQ_sup.mp4">Download the supplementary video.</a></video>
+              <video class="coopuq-video coopuq-supplementary" controls playsinline preload="metadata" poster="assets/images/supplementary-poster.webp" width="1664" height="934" aria-label="Supplementary demonstration video"><source src="assets/videos/CoopUQ_sup.mp4" type="video/mp4"><a href="assets/videos/CoopUQ_sup.mp4">Download the supplementary video.</a></video>
             </figure>
           </div>
         </div>
@@ -156,6 +156,76 @@
             <div class="content has-text-justified">
               <p>CoopUQ links where robots need information to where they should exercise caution. Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence. A variational autoencoder samples possible future occupancy maps; their mean gives the forecast, and normalized pixel-wise entropy estimates its uncertainty. Both maps enter the navigation policy. Crucially, predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, giving the policy a direct incentive to balance progress toward the goal with caution around uncertain future occupancy.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-world demonstrations grouped as in the presentation. -->
+    <section class="section demo-section" id="detour" aria-labelledby="detour-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="detour-title">Anticipating a pedestrian emerging from occlusion</h2>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-1.webp" width="1280" height="720" aria-label="Early detour — trial 1"><source src="assets/videos/detour-1.mp4" type="video/mp4"><a href="assets/videos/detour-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-2.webp" width="1280" height="720" aria-label="Early detour — trial 2"><source src="assets/videos/detour-2.mp4" type="video/mp4"><a href="assets/videos/detour-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="avoidance" aria-labelledby="avoidance-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="avoidance-title">Navigating around obstacles and moving pedestrians</h2>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-1.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 1"><source src="assets/videos/avoidance-1.mp4" type="video/mp4"><a href="assets/videos/avoidance-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-2.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 2"><source src="assets/videos/avoidance-2.mp4" type="video/mp4"><a href="assets/videos/avoidance-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="occlusion" aria-labelledby="occlusion-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="occlusion-title">How cooperation changes the response to occlusion</h2>
+          <h3 class="title is-5 has-text-centered comparison-label">Without Cooperation</h3>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-1.webp" width="1280" height="720" aria-label="Baseline — trial 1"><source src="assets/videos/baseline-1.mp4" type="video/mp4"><a href="assets/videos/baseline-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-2.webp" width="1280" height="720" aria-label="Baseline — trial 2"><source src="assets/videos/baseline-2.mp4" type="video/mp4"><a href="assets/videos/baseline-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          <h3 class="title is-5 has-text-centered comparison-label">With Cooperation</h3>
+          <div class="columns is-variable is-6"><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-1.webp" width="1280" height="720" aria-label="CoopUQ — trial 1"><source src="assets/videos/cooperative-1.mp4" type="video/mp4"><a href="assets/videos/cooperative-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-half"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-2.webp" width="1280" height="720" aria-label="CoopUQ — trial 2"><source src="assets/videos/cooperative-2.mp4" type="video/mp4"><a href="assets/videos/cooperative-2.mp4">Download video.</a></video>
+ </figure></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="layouts" aria-labelledby="layouts-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" id="layouts-title">Adapting to different layouts and pedestrian interactions</h2>
+          <div class="columns is-variable is-6"><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-1.webp" width="1280" height="720" aria-label="Pedestrians around a seating area"><source src="assets/videos/crowds-1.mp4" type="video/mp4"><a href="assets/videos/crowds-1.mp4">Download video.</a></video>
+ </figure></div><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-2.webp" width="1280" height="720" aria-label="Pedestrians in a furnished lobby"><source src="assets/videos/crowds-2.mp4" type="video/mp4"><a href="assets/videos/crowds-2.mp4">Download video.</a></video>
+ </figure></div><div class="column is-one-third"><figure>
+ <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/clutter-1.webp" width="1280" height="720" aria-label="Navigation through cluttered indoor space"><source src="assets/videos/clutter-1.mp4" type="video/mp4"><a href="assets/videos/clutter-1.mp4">Download video.</a></video>
+ </figure></div></div>
           </div>
         </div>
       </div>
@@ -244,76 +314,6 @@
 <tr class="result-ours"><th scope="row">CoopUQ</th><td>Average</td><td><strong>1.00</strong></td><td><strong>0.00</strong></td><td><strong>0.00</strong></td><td><strong>0.94</strong></td><td><strong>0.00</strong></td><td><strong>0.06</strong></td><td><strong>0.88</strong></td><td><strong>0.06</strong></td><td><strong>0.06</strong></td></tr></tbody>
           </table>
         </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real-world demonstrations grouped as in the presentation. -->
-    <section class="section demo-section" id="detour" aria-labelledby="detour-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered" id="detour-title">Anticipating a pedestrian emerging from occlusion</h2>
-          <div class="columns is-variable is-6"><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-1.webp" width="1280" height="720" aria-label="Early detour — trial 1"><source src="assets/videos/detour-1.mp4" type="video/mp4"><a href="assets/videos/detour-1.mp4">Download video.</a></video>
- </figure></div><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/detour-2.webp" width="1280" height="720" aria-label="Early detour — trial 2"><source src="assets/videos/detour-2.mp4" type="video/mp4"><a href="assets/videos/detour-2.mp4">Download video.</a></video>
- </figure></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section demo-section" id="avoidance" aria-labelledby="avoidance-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered" id="avoidance-title">Navigating around obstacles and moving pedestrians</h2>
-          <div class="columns is-variable is-6"><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-1.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 1"><source src="assets/videos/avoidance-1.mp4" type="video/mp4"><a href="assets/videos/avoidance-1.mp4">Download video.</a></video>
- </figure></div><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/avoidance-2.webp" width="1280" height="720" aria-label="Navigation around furniture and pedestrians — trial 2"><source src="assets/videos/avoidance-2.mp4" type="video/mp4"><a href="assets/videos/avoidance-2.mp4">Download video.</a></video>
- </figure></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section demo-section" id="occlusion" aria-labelledby="occlusion-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered" id="occlusion-title">How cooperation changes the response to occlusion</h2>
-          <h3 class="title is-5 has-text-centered comparison-label">Without Cooperation</h3>
-          <div class="columns is-variable is-6"><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-1.webp" width="1280" height="720" aria-label="Baseline — trial 1"><source src="assets/videos/baseline-1.mp4" type="video/mp4"><a href="assets/videos/baseline-1.mp4">Download video.</a></video>
- </figure></div><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/baseline-2.webp" width="1280" height="720" aria-label="Baseline — trial 2"><source src="assets/videos/baseline-2.mp4" type="video/mp4"><a href="assets/videos/baseline-2.mp4">Download video.</a></video>
- </figure></div></div>
-          <h3 class="title is-5 has-text-centered comparison-label">With Cooperation</h3>
-          <div class="columns is-variable is-6"><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-1.webp" width="1280" height="720" aria-label="CoopUQ — trial 1"><source src="assets/videos/cooperative-1.mp4" type="video/mp4"><a href="assets/videos/cooperative-1.mp4">Download video.</a></video>
- </figure></div><div class="column is-half"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/cooperative-2.webp" width="1280" height="720" aria-label="CoopUQ — trial 2"><source src="assets/videos/cooperative-2.mp4" type="video/mp4"><a href="assets/videos/cooperative-2.mp4">Download video.</a></video>
- </figure></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section demo-section" id="layouts" aria-labelledby="layouts-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered" id="layouts-title">Adapting to different layouts and pedestrian interactions</h2>
-          <div class="columns is-variable is-6"><div class="column is-one-third"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-1.webp" width="1280" height="720" aria-label="Pedestrians around a seating area"><source src="assets/videos/crowds-1.mp4" type="video/mp4"><a href="assets/videos/crowds-1.mp4">Download video.</a></video>
- </figure></div><div class="column is-one-third"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/crowds-2.webp" width="1280" height="720" aria-label="Pedestrians in a furnished lobby"><source src="assets/videos/crowds-2.mp4" type="video/mp4"><a href="assets/videos/crowds-2.mp4">Download video.</a></video>
- </figure></div><div class="column is-one-third"><figure>
- <video class="coopuq-video coopuq-demo" data-demo controls muted loop playsinline preload="none" poster="assets/images/clutter-1.webp" width="1280" height="720" aria-label="Navigation through cluttered indoor space"><source src="assets/videos/clutter-1.mp4" type="video/mp4"><a href="assets/videos/clutter-1.mp4">Download video.</a></video>
- </figure></div></div>
           </div>
         </div>
       </div>
