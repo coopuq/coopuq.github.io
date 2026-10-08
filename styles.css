@@ -56,19 +56,6 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .title.is-3 { text-wrap: balance; }
 .title.is-3::after { width: 48px; height: 2px; background: var(--primary-color); }
 .content.has-text-justified { color: #4b5563; text-align: left !important; }
-/* Give the explanatory sections distinct, quiet reading layouts. */
-.content.motivation-prose, .content.method-prose { font-size: 1.025rem; line-height: 1.8; font-weight: 400; }
-.motivation-prose { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; margin-top: 2rem; }
-.content.motivation-prose > p { margin: 0; padding-top: 1.25rem; border-top: 2px solid #cbd5e1; }
-.content.motivation-prose > p + p { border-top-color: #93b4ed; }
-#abstract { background: #f8fafc; border-block: 1px solid #edf0f4; }
-#abstract .content { max-width: 72ch; margin-inline: auto; font-size: 1.025rem; line-height: 1.9; font-weight: 400; }
-#abstract .content p { margin-bottom: 0; }
-.method-prose { margin-top: 2rem; }
-.method-step { display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); gap: 1.75rem; padding-block: 1.5rem; border-top: 1px solid var(--border-color); }
-.content .method-step h3 { margin: 0; color: #315a94; font-size: .95rem; font-weight: 400; line-height: 1.8; }
-.content .method-step p { margin: 0; }
-.method-step:last-child { padding-bottom: 0; }
 .bibtex-header { flex-wrap: wrap; gap: 1rem; }
 .coopuq-citation-actions { flex-wrap: wrap; }
 @media screen and (max-width: 768px) {
@@ -81,9 +68,6 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
   .institution-logo img { width: calc(var(--logo-width, 96px) * .8); }
   .title.is-3:not(.publication-title) { font-size: 1.65rem; line-height: 1.3; }
   .scroll-to-top { right: 1rem; bottom: 1rem; width: 44px; height: 44px; }
-  .motivation-prose { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
-  .content.motivation-prose, .content.method-prose, #abstract .content { font-size: 1rem; line-height: 1.8; }
-  .method-step { grid-template-columns: minmax(0, 1fr); gap: .5rem; padding-block: 1.25rem; }
 }
 @media screen and (max-width: 640px) {
   .comparison-pair { grid-template-columns: minmax(0, 1fr); gap: 14px; }
