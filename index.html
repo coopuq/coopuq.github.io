@@ -119,48 +119,6 @@
       </div>
     </section>
 
-    <!-- 2. Full supplementary video with the encoded top border removed. -->
-    <section class="section" id="video" aria-label="Supplementary demonstration">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <figure>
-              <video class="coopuq-video coopuq-supplementary" controls playsinline preload="metadata" poster="assets/images/supplementary-poster.webp" width="1664" height="934" aria-label="Supplementary demonstration video"><source src="assets/videos/CoopUQ_sup.mp4" type="video/mp4"><a href="assets/videos/CoopUQ_sup.mp4">Download the supplementary video.</a></video>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Original manuscript abstract. -->
-    <section class="section hero is-light" id="abstract" aria-labelledby="abstract-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3" id="abstract-title">Abstract</h2>
-            <div class="content has-text-justified"><p id="paper-abstract">Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="method" aria-labelledby="method-title">
-      <div class="container is-max-widescreen">
-        <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3 has-text-centered" id="method-title">Method</h2>
-            <figure class="method-figure">
-              <a href="assets/images/method-overview.png" target="_blank" rel="noopener" aria-label="Open the CoopUQ architecture at full size"><img src="assets/images/method-overview.png" width="3393" height="1299" loading="lazy" alt="CoopUQ architecture. Robots encode LiDAR-derived occupancy histories and fuse aligned features across robots. Stochastic forecasting produces occupancy and uncertainty maps. A constrained multi-agent policy combines these maps with ego and neighboring robot states, using separate reward and cost critics during training."></a>
-            </figure>
-            <div class="content has-text-justified">
-              <p>CoopUQ links where robots need information to where they should exercise caution. Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence. A variational autoencoder samples possible future occupancy maps; their mean gives the forecast, and normalized pixel-wise entropy estimates its uncertainty. Both maps enter the navigation policy. Crucially, predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, giving the policy a direct incentive to balance progress toward the goal with caution around uncertain future occupancy.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Real-world demonstrations grouped as in the presentation. -->
     <section class="section demo-section" id="detour" aria-labelledby="detour-title">
       <div class="container is-max-widescreen">
@@ -230,6 +188,49 @@
         </div>
       </div>
     </section>
+
+    <!-- Full supplementary video with the encoded top border removed. -->
+    <section class="section" id="video" aria-label="Supplementary demonstration">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <figure>
+              <video class="coopuq-video coopuq-supplementary" controls playsinline preload="metadata" poster="assets/images/supplementary-poster.webp" width="1664" height="934" aria-label="Supplementary demonstration video"><source src="assets/videos/CoopUQ_sup.mp4" type="video/mp4"><a href="assets/videos/CoopUQ_sup.mp4">Download the supplementary video.</a></video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Original manuscript abstract. -->
+    <section class="section hero is-light" id="abstract" aria-labelledby="abstract-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="abstract-title">Abstract</h2>
+            <div class="content has-text-justified"><p id="paper-abstract">Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-centered" id="method-title">Method</h2>
+            <figure class="method-figure">
+              <a href="assets/images/method-overview.png" target="_blank" rel="noopener" aria-label="Open the CoopUQ architecture at full size"><img src="assets/images/method-overview.png" width="3393" height="1299" loading="lazy" alt="CoopUQ architecture. Robots encode LiDAR-derived occupancy histories and fuse aligned features across robots. Stochastic forecasting produces occupancy and uncertainty maps. A constrained multi-agent policy combines these maps with ego and neighboring robot states, using separate reward and cost critics during training."></a>
+            </figure>
+            <div class="content has-text-justified">
+              <p>CoopUQ links where robots need information to where they should exercise caution. Each robot encodes its LiDAR-derived occupancy history and aligns neighboring features to its own frame. Spatial disagreement between these features provides a cue for a learned fusion gate, encouraging the use of complementary observations in occluded or inconsistent regions while preserving reliable local evidence. A variational autoencoder samples possible future occupancy maps; their mean gives the forecast, and normalized pixel-wise entropy estimates its uncertainty. Both maps enter the navigation policy. Crucially, predicted occupancy and high uncertainty also contribute to an explicit cost constraint in MAPPO-Lagrangian training, giving the policy a direct incentive to balance progress toward the goal with caution around uncertain future occupancy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section result-section" id="forecast-results" aria-labelledby="forecast-results-title">
       <div class="container is-max-widescreen">
