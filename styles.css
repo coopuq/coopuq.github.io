@@ -60,8 +60,10 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .navigation-demo { margin: 0; }
 .navigation-demo + .navigation-demo { margin-top: 1.5rem; }
 .navigation-demo figcaption { margin: 0 0 .65rem; color: var(--text-secondary); font-size: 1rem; font-weight: 400; line-height: 1.5; }
-.robot-count { display: flex; flex-wrap: wrap; align-items: center; gap: 3px; }
-.robot-count img { display: block; width: 24px; height: 24px; }
+.robot-count { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.robot-count-label { min-width: 4.75rem; white-space: nowrap; }
+.robot-count-icons { display: inline-flex; align-items: center; gap: 2px; }
+.robot-count img { display: block; width: 22px; height: 22px; }
 .navigation-video { aspect-ratio: 2686 / 936; background: #fafbfc; }
 /* Keep the paper-page layout while giving its argument a clearer reading rhythm. */
 .publication-title { max-width: 1080px; margin-inline: auto; text-wrap: balance; line-height: 1.2 !important; }
