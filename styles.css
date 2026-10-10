@@ -51,6 +51,24 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .comparison-panel .comparison-label { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 12px 16px; border-radius: 8px 8px 0 0; background: var(--comparison-background); color: var(--comparison-text); font-size: 1rem; font-weight: 500; line-height: 1.5; text-align: center; }
 .comparison-panel .comparison-label::before { content: ""; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: var(--comparison-accent); }
 .comparison-panel .coopuq-video { border-radius: 0 0 8px 8px; box-shadow: none; }
+/* One full-width comparison keeps all three methods readable. */
+.simulation-controls { margin: 0 0 1.5rem; }
+.simulation-controls[hidden] { display: none; }
+.simulation-controls fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.simulation-controls fieldset + fieldset { margin-top: 1rem; }
+.simulation-controls legend { margin-bottom: .5rem; padding: 0; color: var(--text-secondary); font-size: .8rem; font-weight: 400; }
+.simulation-options { display: flex; flex-wrap: wrap; gap: .5rem; }
+.simulation-options label { position: relative; cursor: pointer; }
+.simulation-options input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.simulation-options span { display: block; padding: .6rem 1rem; border: 1px solid var(--border-color); border-radius: 999px; color: var(--text-secondary); background: #fff; font-size: .9rem; font-weight: 400; line-height: 1.5; }
+.simulation-options label:hover span { border-color: #93b4ed; }
+.simulation-options input:checked + span { color: #1d4ed8; border-color: #93b4ed; background: #eff6ff; }
+.simulation-options input:focus-visible + span { outline: 3px solid var(--primary-color); outline-offset: 3px; }
+.simulation-figure { margin: 0; }
+.simulation-video { aspect-ratio: 2686 / 1040; background: #fafbfc; }
+.simulation-figure figcaption { margin-top: 1rem; text-align: center; font-size: .9rem; line-height: 1.65; font-weight: 400; }
+.simulation-selection { display: block; color: #334155; }
+.simulation-note { display: block; margin-top: .25rem; color: var(--text-secondary); }
 /* Keep the paper-page layout while giving its argument a clearer reading rhythm. */
 .publication-title { max-width: 1080px; margin-inline: auto; text-wrap: balance; line-height: 1.2 !important; }
 .title.is-3 { text-wrap: balance; }

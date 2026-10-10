@@ -185,6 +185,41 @@ document.addEventListener("visibilitychange", () => {
   if (document.hidden) pauseDemos();
 });
 
+function setupSimulation(section) {
+  const controls = section.querySelector(".simulation-controls");
+  const video = section.querySelector("video");
+  const selection = section.querySelector(".simulation-selection");
+  const fallback = video.querySelector("a");
+  const conditions = {
+    standard: "Standard",
+    unseen: "Unseen layouts",
+    faster: "Faster pedestrians",
+    denser: "Denser crowds"
+  };
+  controls.addEventListener("change", () => {
+    const count = controls.querySelector('input[name="sim-robots"]:checked').value;
+    const condition = controls.querySelector('input[name="sim-condition"]:checked').value;
+    if (!["3", "5", "10"].includes(count) || !Object.hasOwn(conditions, condition)) return;
+    const key = `${condition}-${count}`;
+    if (video.dataset.selection === key) return;
+    const wasPlaying = !video.paused;
+    video.pause();
+    video.dataset.selection = key;
+    video.poster = `assets/images/simulation/${key}.webp`;
+    video.src = `assets/videos/simulation/${key}.mp4`;
+    fallback.href = video.src;
+    video.setAttribute("aria-label", `${count} robots, ${conditions[condition]}: CoopUQ, SAMARL, and SCOPE`);
+    selection.textContent = `${count} robots · ${conditions[condition]}`;
+    video.load();
+    if (wasPlaying && !reducedMotion.matches && supplementaryVideo.paused && !document.hidden) {
+      video.play().catch(() => { /* Native controls remain available. */ });
+    }
+  });
+  controls.hidden = false;
+}
+const simulationSection = document.querySelector("#simulation");
+if (simulationSection) setupSimulation(simulationSection);
+
 // Keep the template's scroll control, including reduced-motion support.
 const scrollButton = document.querySelector("#scroll-to-top");
 const updateScrollButton = () => {
