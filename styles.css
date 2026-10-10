@@ -52,7 +52,6 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .comparison-panel .comparison-label::before { content: ""; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: var(--comparison-accent); }
 .comparison-panel .coopuq-video { border-radius: 0 0 8px 8px; box-shadow: none; }
 /* List every comparison at full width, with one readable HTML legend. */
-.navigation-note { margin: 0 auto 1rem; max-width: 70ch; color: var(--text-secondary); font-size: .95rem; line-height: 1.7; text-align: center; }
 .navigation-legend { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.25rem; margin: 0 0 2rem; padding: 1rem .5rem; list-style: none; background: #fff; border-bottom: 1px solid var(--border-color); }
 .navigation-legend li { display: flex; align-items: center; gap: .4rem; color: #475569; font-size: .9rem; font-weight: 400; line-height: 1.5; }
 .navigation-legend svg { width: 22px; height: 22px; flex: 0 0 22px; }
