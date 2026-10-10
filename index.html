@@ -243,33 +243,76 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3 has-text-centered" id="simulation-title">Simulation across robot counts and environments</h2>
-            <form class="simulation-controls" aria-label="Select a simulation" hidden>
-              <fieldset>
-                <legend>Robots</legend>
-                <div class="simulation-options">
-                  <label><input type="radio" name="sim-robots" value="3" checked><span>3 robots</span></label>
-                  <label><input type="radio" name="sim-robots" value="5"><span>5 robots</span></label>
-                  <label><input type="radio" name="sim-robots" value="10"><span>10 robots</span></label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Condition</legend>
-                <div class="simulation-options">
-                  <label><input type="radio" name="sim-condition" value="standard" checked><span>Standard</span></label>
-                  <label><input type="radio" name="sim-condition" value="unseen"><span>Unseen layouts</span></label>
-                  <label><input type="radio" name="sim-condition" value="faster"><span>Faster pedestrians</span></label>
-                  <label><input type="radio" name="sim-condition" value="denser"><span>Denser crowds</span></label>
-                </div>
-              </fieldset>
-            </form>
-            <figure class="simulation-figure">
-              <video class="coopuq-video simulation-video" data-demo data-selection="standard-3" controls muted loop playsinline preload="none" width="2686" height="1040" src="assets/videos/simulation/standard-3.mp4" poster="assets/images/simulation/standard-3.webp" aria-label="3 robots, standard conditions: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/simulation/standard-3.mp4">Download simulation video.</a></video>
-              <figcaption>
-                <span class="simulation-selection" aria-live="polite" aria-atomic="true">3 robots · Standard</span>
-                <span class="simulation-note">CoopUQ, SAMARL, and SCOPE share the same robot starts, goals, and pedestrian motion in each comparison.</span>
-              </figcaption>
-            </figure>
+            <h2 class="title is-3 has-text-centered" id="simulation-title">Across robot counts and environments</h2>
+            <p class="navigation-note">CoopUQ, SAMARL, and SCOPE share the same robot starts, goals, and pedestrian motion in each comparison.</p>
+            <ul class="navigation-legend" aria-label="Animation legend">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6" fill="#2f80de"/></svg><span>Robot</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.7 5.8 21 7 14.1 2 9.3 8.9 8.3Z" fill="#009f12"/></svg><span>Goal reached</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.7 5.8 21 7 14.1 2 9.3 8.9 8.3Z" fill="none" stroke="#1679e3" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Goal not reached</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="#df3b32" stroke-width="4"/></svg><span>Collision or timeout</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6" fill="#f46b32"/></svg><span>Pedestrian</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#f46b32" fill-opacity=".2" stroke="#f46b32" stroke-width="1.5"/></svg><span>Social zone</span></li>
+            </ul>
+            <div class="navigation-group" role="group" aria-labelledby="navigation-iid-title">
+              <h3 id="navigation-iid-title">In-distribution</h3>
+              <figure class="navigation-demo">
+                <figcaption>3 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/iid-3.mp4" poster="assets/images/navigation/iid-3.webp" aria-label="3 robots, In-distribution: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/iid-3.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>5 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/iid-5.mp4" poster="assets/images/navigation/iid-5.webp" aria-label="5 robots, In-distribution: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/iid-5.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>10 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/iid-10.mp4" poster="assets/images/navigation/iid-10.webp" aria-label="10 robots, In-distribution: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/iid-10.mp4">Download video.</a></video>
+              </figure>
+            </div>
+            <div class="navigation-group" role="group" aria-labelledby="navigation-unseen-title">
+              <h3 id="navigation-unseen-title">Unseen layouts</h3>
+              <figure class="navigation-demo">
+                <figcaption>3 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/unseen-3.mp4" poster="assets/images/navigation/unseen-3.webp" aria-label="3 robots, Unseen layouts: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/unseen-3.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>5 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/unseen-5.mp4" poster="assets/images/navigation/unseen-5.webp" aria-label="5 robots, Unseen layouts: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/unseen-5.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>10 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/unseen-10.mp4" poster="assets/images/navigation/unseen-10.webp" aria-label="10 robots, Unseen layouts: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/unseen-10.mp4">Download video.</a></video>
+              </figure>
+            </div>
+            <div class="navigation-group" role="group" aria-labelledby="navigation-rushing-title">
+              <h3 id="navigation-rushing-title">Rushing pedestrians</h3>
+              <figure class="navigation-demo">
+                <figcaption>3 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/rushing-3.mp4" poster="assets/images/navigation/rushing-3.webp" aria-label="3 robots, Rushing pedestrians: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/rushing-3.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>5 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/rushing-5.mp4" poster="assets/images/navigation/rushing-5.webp" aria-label="5 robots, Rushing pedestrians: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/rushing-5.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>10 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/rushing-10.mp4" poster="assets/images/navigation/rushing-10.webp" aria-label="10 robots, Rushing pedestrians: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/rushing-10.mp4">Download video.</a></video>
+              </figure>
+            </div>
+            <div class="navigation-group" role="group" aria-labelledby="navigation-denser-title">
+              <h3 id="navigation-denser-title">Denser crowds</h3>
+              <figure class="navigation-demo">
+                <figcaption>3 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/denser-3.mp4" poster="assets/images/navigation/denser-3.webp" aria-label="3 robots, Denser crowds: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/denser-3.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>5 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/denser-5.mp4" poster="assets/images/navigation/denser-5.webp" aria-label="5 robots, Denser crowds: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/denser-5.mp4">Download video.</a></video>
+              </figure>
+              <figure class="navigation-demo">
+                <figcaption>10 robots</figcaption>
+                <video class="coopuq-video navigation-video" data-demo controls muted loop playsinline preload="none" width="2686" height="936" src="assets/videos/navigation/denser-10.mp4" poster="assets/images/navigation/denser-10.webp" aria-label="10 robots, Denser crowds: CoopUQ, SAMARL, and SCOPE"><a href="assets/videos/navigation/denser-10.mp4">Download video.</a></video>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
