@@ -14,8 +14,6 @@ html { scroll-padding-top: 24px; }
 #motivation .content p:last-child { margin-bottom: 0; }
 #video { padding-top: 1rem; }
 .coopuq-demo { aspect-ratio: 16 / 9; }
-.demo-section { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-.demo-section .title.is-3 { font-family: inherit !important; font-weight: 400 !important; letter-spacing: -.025em; line-height: 1.3; }
 .coopuq-demo-heading { margin-bottom: 14px !important; }
 .coopuq-citation-actions { display: flex; align-items: center; gap: 16px; }
 .coopuq-citation-actions a { font-size: .9rem; }
@@ -55,29 +53,29 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .comparison-panel { min-width: 0; margin: 0; padding: 6px; border: 1px solid var(--comparison-border); border-radius: 14px; background: white; box-shadow: 0 6px 22px -16px rgba(15, 23, 42, .28); }
 .comparison-panel--baseline { --comparison-accent: #64748b; --comparison-border: #e2e8f0; --comparison-background: #f1f5f9; --comparison-text: #334155; }
 .comparison-panel--cooperative { --comparison-accent: #2563eb; --comparison-border: #c7d9f5; --comparison-background: #eff6ff; --comparison-text: #1d4ed8; }
-.comparison-panel .comparison-label { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 12px 16px; border-radius: 8px 8px 0 0; background: var(--comparison-background); color: var(--comparison-text); font-size: 1rem; font-weight: 400; line-height: 1.4; text-align: center; }
+.comparison-panel .comparison-label { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 12px 16px; border-radius: 8px 8px 0 0; background: var(--comparison-background); color: var(--comparison-text); font-size: 1rem; font-weight: 500; line-height: 1.5; text-align: center; }
 .comparison-panel .comparison-label::before { content: ""; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: var(--comparison-accent); }
 .comparison-panel .coopuq-video { border-radius: 0 0 8px 8px; box-shadow: none; }
 /* List every comparison at full width, with one readable HTML legend. */
 .navigation-legend { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.25rem; margin: 0 0 2rem; padding: 1rem .5rem; list-style: none; background: #fff; border-bottom: 1px solid var(--border-color); }
-.navigation-legend li { display: flex; align-items: center; gap: .4rem; color: #475569; font-size: .875rem; font-weight: 400; line-height: 1.4; }
+.navigation-legend li { display: flex; align-items: center; gap: .4rem; color: #475569; font-size: .9rem; font-weight: 400; line-height: 1.5; }
 .navigation-legend svg { width: 22px; height: 22px; flex: 0 0 22px; }
 .navigation-group { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--scenario-border); border-radius: 18px; background: var(--scenario-background); }
 .navigation-group + .navigation-group { margin-top: 3rem; }
-.navigation-group h3 { margin: 0 0 1.25rem; color: var(--scenario-heading); font-size: clamp(1.25rem, 2vw, 1.375rem); font-weight: 400; line-height: 1.3; letter-spacing: -.015em; }
+.navigation-group h3 { margin: 0 0 1.25rem; color: var(--scenario-heading); font-size: 1.125rem; font-weight: 400; line-height: 1.4; letter-spacing: .01em; }
 .navigation-group--iid { --scenario-background: #f1f7ff; --scenario-border: #cfe0f5; --scenario-heading: #27578c; }
 .navigation-group--unseen { --scenario-background: #f6f2ff; --scenario-border: #e1d6f5; --scenario-heading: #695193; }
 .navigation-group--rushing { --scenario-background: #eef8f4; --scenario-border: #cee6dc; --scenario-heading: #24634f; }
 .navigation-group--denser { --scenario-background: #fff8ee; --scenario-border: #f2d8b4; --scenario-heading: #9a4d13; }
 .navigation-demo { margin: 0; padding: clamp(10px, 1.6vw, 16px); border: 1px solid var(--scenario-border); border-radius: 14px; background: #fff; }
 .navigation-demo + .navigation-demo { margin-top: 1.5rem; }
-.navigation-demo figcaption { margin: 0 0 .8rem; color: #475569; font-size: .9375rem; font-weight: 400; line-height: 1.4; }
+.navigation-demo figcaption { margin: 0 0 .65rem; color: var(--text-secondary); font-size: 1rem; font-weight: 400; line-height: 1.5; }
 .robot-count { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
-.robot-count-label { min-width: 4.75rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.robot-count-label { display: inline-flex; align-items: center; justify-content: center; min-width: 5.5rem; padding: 4px 10px; border: 1px solid var(--scenario-border); border-radius: 6px; background: var(--scenario-background); color: var(--scenario-heading); font-size: .875rem; line-height: 1.25; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .robot-count-icons { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 2px; max-width: 100%; }
 .robot-count img { display: block; width: clamp(18px, 5vw, 24px); height: clamp(18px, 5vw, 24px); }
-.navigation-methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.3%; margin: 0 1.7% .65rem; color: #475569; font-size: clamp(1rem, 1.6vw, 1.1875rem); font-weight: 400; line-height: 1.35; letter-spacing: -.01em; text-align: center; }
-.navigation-methods span { padding: 4px 0 8px; border-bottom: 2px solid #e2e8f0; }
+.navigation-methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.3%; margin: 0 1.7% .5rem; color: #475569; font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 400; line-height: 1.5; text-align: center; }
+.navigation-methods span { padding: 4px 0 6px; border-bottom: 2px solid #e2e8f0; }
 .navigation-methods .navigation-method--ours { color: #1d4ed8; border-color: #2563eb; }
 .navigation-video { aspect-ratio: 2686 / 936; background: #fafbfc; }
 /* Keep the paper-page layout while giving its argument a clearer reading rhythm. */
