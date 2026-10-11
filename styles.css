@@ -60,10 +60,13 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .navigation-legend { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.25rem; margin: 0 0 2rem; padding: 1rem .5rem; list-style: none; background: #fff; border-bottom: 1px solid var(--border-color); }
 .navigation-legend li { display: flex; align-items: center; gap: .4rem; color: #475569; font-size: .9rem; font-weight: 400; line-height: 1.5; }
 .navigation-legend svg { width: 22px; height: 22px; flex: 0 0 22px; }
-.navigation-group + .navigation-group { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
-.navigation-group h3 { margin: 0 0 1.25rem; color: #334155; font-size: 1.3rem; font-weight: 400; line-height: 1.5; }
-.navigation-group.navigation-group--denser { padding: clamp(16px, 2.5vw, 28px); border: 1px solid #f2d8b4; border-radius: 18px; background: #fff8ee; }
-.navigation-group--denser h3 { color: #9a4d13; }
+.navigation-group { padding: clamp(16px, 2.5vw, 28px); border: 1px solid var(--scenario-border); border-radius: 18px; background: var(--scenario-background); }
+.navigation-group + .navigation-group { margin-top: 3rem; }
+.navigation-group h3 { margin: 0 0 1.25rem; color: var(--scenario-heading); font-size: 1.3rem; font-weight: 400; line-height: 1.5; }
+.navigation-group--iid { --scenario-background: #f1f7ff; --scenario-border: #cfe0f5; --scenario-heading: #27578c; }
+.navigation-group--unseen { --scenario-background: #f6f2ff; --scenario-border: #e1d6f5; --scenario-heading: #695193; }
+.navigation-group--rushing { --scenario-background: #eef8f4; --scenario-border: #cee6dc; --scenario-heading: #24634f; }
+.navigation-group--denser { --scenario-background: #fff8ee; --scenario-border: #f2d8b4; --scenario-heading: #9a4d13; }
 .navigation-demo { margin: 0; }
 .navigation-demo + .navigation-demo { margin-top: 1.5rem; }
 .navigation-demo figcaption { margin: 0 0 .65rem; color: var(--text-secondary); font-size: 1rem; font-weight: 400; line-height: 1.5; }
