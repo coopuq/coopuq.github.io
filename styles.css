@@ -21,6 +21,11 @@ html { scroll-padding-top: 24px; }
 #bibtex { white-space: pre; }
 video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 4px; }
 .publication-links .link-block button { margin: 8px 4px; }
+.publication-conference { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 12px; margin: 15px 0 20px; }
+.publication-conference > span { font-weight: 600; text-wrap: balance; }
+.conference-logo { display: inline-flex; flex: 0 0 auto; }
+.conference-logo img { display: block; width: 88px; height: 44px; }
+.conference-logo:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 4px; }
 .institution-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px; margin: 14px auto 16px; }
 .publication-authors .institution-logo { display: flex; align-items: center; justify-content: center; line-height: 0; }
 .institution-logo img { display: block; width: var(--logo-width, 96px); height: auto; object-fit: contain; }
