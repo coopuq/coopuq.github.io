@@ -62,6 +62,8 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .navigation-legend svg { width: 22px; height: 22px; flex: 0 0 22px; }
 .navigation-group + .navigation-group { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
 .navigation-group h3 { margin: 0 0 1.25rem; color: #334155; font-size: 1.3rem; font-weight: 400; line-height: 1.5; }
+.navigation-group.navigation-group--denser { padding: clamp(16px, 2.5vw, 28px); border: 1px solid #f2d8b4; border-radius: 18px; background: #fff8ee; }
+.navigation-group--denser h3 { color: #9a4d13; }
 .navigation-demo { margin: 0; }
 .navigation-demo + .navigation-demo { margin-top: 1.5rem; }
 .navigation-demo figcaption { margin: 0 0 .65rem; color: var(--text-secondary); font-size: 1rem; font-weight: 400; line-height: 1.5; }
@@ -69,6 +71,9 @@ video:focus-visible, button:focus-visible { outline: 3px solid var(--primary-col
 .robot-count-label { min-width: 4.75rem; white-space: nowrap; }
 .robot-count-icons { display: inline-flex; align-items: center; gap: 2px; }
 .robot-count img { display: block; width: 24px; height: 24px; }
+.navigation-methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.3%; margin: 0 1.7% .5rem; color: #475569; font-size: clamp(1rem, 1.4vw, 1.125rem); font-weight: 400; line-height: 1.5; text-align: center; }
+.navigation-methods span { padding: 4px 0 6px; border-bottom: 2px solid #e2e8f0; }
+.navigation-methods .navigation-method--ours { color: #1d4ed8; border-color: #2563eb; }
 .navigation-video { aspect-ratio: 2686 / 936; background: #fafbfc; }
 /* Keep the paper-page layout while giving its argument a clearer reading rhythm. */
 .publication-title { max-width: 1080px; margin-inline: auto; text-wrap: balance; line-height: 1.2 !important; }
